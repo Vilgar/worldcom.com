@@ -97,4 +97,4 @@ create table zip_codes
   zip_code   varchar(255) null
 );
 
-INSERT INTO worldcom.zip_codes (id, country_id, zip_code) VALUES (1, '67', '90210');
+INSERT INTO worldcom.zip_codes (id, country_code, zip_code) VALUES (1, '67', '90210');
