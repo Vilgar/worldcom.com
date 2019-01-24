@@ -1,6 +1,3 @@
-<?php
-//include "api.php";
-?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -10,11 +7,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Worldcom</title>
         <script src="assets/common.js"></script>
+        <style>td, th { border: 1px solid #999; padding: 0.5rem; }</style>
     </head>
     <body>
         <select id="country">
             <option value="" disabled selected>Select Country</option>
-            <option value="1">Country 1</option>
         </select>
         <input type="text" id="zip_code" placeholder="Write Zip Code">
         <button onclick="load()">Submit</button>

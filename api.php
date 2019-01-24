@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 if(!empty($_POST)) {
     $db = new mysqli("localhost", "root", "", "worldcom");
     if($db->connect_errno) {
@@ -35,7 +36,7 @@ if(!empty($_POST)) {
                 $zip_code_id = $db->insert_id;
                 foreach ($data['places'] as $place) {
                     $place = array_values($place);
-                    $db->query("INSERT INTO places (name, state, latitude, longitude, code) VALUES ('".$place[0]."', '".$place[2]."', '".$place[1]."', '".$place[4]."', '".$place[3]."')");
+                    $db->query("INSERT INTO places (name, state, latitude, longitude, code, zip_code_id) VALUES ('".$place[0]."', '".$place[2]."', '".$place[1]."', '".$place[4]."', '".$place[3]."', '".$zip_code_id."')");
                 }
                 $data = get_country_list($_POST['zip_code']);
             }
